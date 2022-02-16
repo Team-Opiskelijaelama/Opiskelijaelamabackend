@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Opiskelijaelämä</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<form th:object="${laulu}" th:action="@{../saveLaulu}" action="#" method="post">
+	<input hidden type="text" th:field="*{lauluId}" readonly="readonly"/>
+	<label for="nimi">Nimi</label>
+	<input type="text" id="nimi" th:field="*{nimi}" />
+	<br/>
+	<label for="savel">Sävel</label>
+	<input type="text" id="savel" th:field="*{savel}" />
+	<br/>
+	<label for="sanat">Sanat</label>
+	<input type="text" id="sanat" th:field="*{sanat}" />
+	<br/>
+	<label for="ohje">Ohje</label>
+	<input type="text" id="ohje" th:field="*{ohje}" />
+	<br/>
+	<label for="pakollinen">Pakollisuus</label>
+		<select id="pakollisuus" th:field="*{pakollinen}">
+       		<option value="true" >Pakollinen</option>
+       		<option value="false">Ei pakollinen</option>
+   		 </select>
+   	<br/>
+	<input type="submit" value="Tallenna" class="btn btn-success"></input>
+	</form>
+</body>
+</html>

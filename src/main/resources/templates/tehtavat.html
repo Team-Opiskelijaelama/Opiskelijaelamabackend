@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Opiskelijaelämä</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Rastit</h1>
+    <table class="table table-stripped">
+    	<tr>
+    		<th>Nimi</th>
+    		<th>Kuvaus</th>
+    	</tr>
+    	<tr th:each = "tehtava : ${tehtavat}">
+    		<td th:text="${tehtava.tehtavanimi}"></td>
+    		<td th:text="${tehtava.tehtavakuvaus}"></td>
+    		<td><a th:href="@{/deleteTehtava/{id}(id=${tehtava.tehtavaId})}" class="btn btn-danger">Poista</a></td>
+    	</tr>
+     </table>
+<a href="/addTehtava" class="btn btn-primary">Lisää Tehtävä</a>
+</body>
+</html>

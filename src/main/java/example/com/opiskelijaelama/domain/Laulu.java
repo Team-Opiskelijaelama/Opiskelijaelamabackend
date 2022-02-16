@@ -44,7 +44,20 @@ public class Laulu {
 		super();
 	}
 	
+	public Laulu(String nimi, String sanat, Boolean pakollinen) {
+		super();
+		this.nimi = nimi;
+		this.sanat = sanat;
+		this.pakollinen = pakollinen;
+	}
 	
+	public Laulu(String nimi, String sanat, String savel, Boolean pakollinen) {
+		super();
+		this.nimi = nimi;
+		this.sanat = sanat;
+		this.savel = savel;
+		this.pakollinen = pakollinen;
+	}
 	
 	public Laulu(String nimi, String sanat, String savel, String ohje, Boolean pakollinen) {
 		super();
@@ -54,8 +67,6 @@ public class Laulu {
 		this.ohje = ohje;
 		this.pakollinen = pakollinen;
 	}
-
-
 
 	public Long getLauluId() {
 		return lauluId;
@@ -96,20 +107,14 @@ public class Laulu {
 	public void setOhje(String ohje) {
 		this.ohje = ohje;
 	}
-
-	
 	
 	public Boolean getPakollinen() {
 		return pakollinen;
 	}
 
-
-
 	public void setPakollinen(Boolean pakollinen) {
 		this.pakollinen = pakollinen;
 	}
-
-
 
 	public List<Sitsit> getSitseja() {
 		return sitseja;

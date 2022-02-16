@@ -30,8 +30,6 @@ public class Sitsit extends Tapahtuma {
 	@JsonIgnoreProperties("sitsit, tapahtuma_id")
 	private List<Laulu> laulukirja = new ArrayList<Laulu>();
 	
-
-	
 	public Sitsit() {
 		super();
 		this.setNimi("Sitsit");

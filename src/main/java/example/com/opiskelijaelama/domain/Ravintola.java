@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@JsonIgnoreProperties(value = { "aprro" })
+@JsonIgnoreProperties(value = { "appro" })
 @Table(name="RAVINTOLA")
 public class Ravintola {
 	

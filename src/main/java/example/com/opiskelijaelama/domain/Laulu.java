@@ -3,6 +3,7 @@ package example.com.opiskelijaelama.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -24,10 +25,12 @@ public class Laulu {
 	
 	private String nimi;
 	
+	@Column(columnDefinition = "varchar(1500)")
 	private String sanat;
 	
 	private String savel;
-	
+
+	@Column(columnDefinition = "varchar(1500)")
 	private String ohje;
 	
 	private Boolean pakollinen;

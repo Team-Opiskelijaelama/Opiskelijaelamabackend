@@ -29,12 +29,6 @@ public class RestApiController {
 	@RequestMapping(value="/tapahtumatiedot", method = RequestMethod.GET)
     public @ResponseBody List<Tapahtuma> tapahtumatiedotRest() {
 		
-		// Tapahtuma appro = repository.etsiAppro(Long.valueOf(4));
-		// Tapahtuma gambinakokous = repository.etsiGambinakokous(Long.valueOf(4));
-		// Tapahtuma rastikierros = repository.etsiRastikierros(Long.valueOf(4));
-		// Tapahtuma sitsit = repository.etsiSitsit(Long.valueOf(4));
-		
-		
 		List<Tapahtuma> tapahtumatiedot = new ArrayList<Tapahtuma>();
 		tapahtumatiedot.add(repository.etsiAppro(Long.valueOf(4)));
 		tapahtumatiedot.add(repository.etsiGambinakokous(Long.valueOf(4)));

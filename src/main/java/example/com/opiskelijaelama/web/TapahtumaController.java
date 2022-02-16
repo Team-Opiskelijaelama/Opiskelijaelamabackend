@@ -19,12 +19,6 @@ public class TapahtumaController {
 	@RequestMapping(value="/")
 	public String listaaTapahtumat(Model model) {
 		
-		// Tapahtuma appro = repository.etsiAppro(Long.valueOf(4));
-		// Tapahtuma gambinakokous = repository.etsiGambinakokous(Long.valueOf(4));
-		// Tapahtuma rastikierros = repository.etsiRastikierros(Long.valueOf(4));
-		// Tapahtuma sitsit = repository.etsiSitsit(Long.valueOf(4));
-		
-		
 		List<Tapahtuma> tapahtumat = new ArrayList<Tapahtuma>();
 		tapahtumat.add(repository.etsiAppro(Long.valueOf(4)));
 		tapahtumat.add(repository.etsiGambinakokous(Long.valueOf(4)));

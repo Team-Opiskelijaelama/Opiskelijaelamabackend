@@ -2,4 +2,5 @@ target/
 .metadata/
 .settings/
 .classpath/
+.project/
 .projects/

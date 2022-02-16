@@ -4,3 +4,10 @@ target/
 .classpath/
 .project/
 .projects/
+
+/target/
+/.metadata/
+/.settings/
+/.classpath/
+/.project/
+/.projects/

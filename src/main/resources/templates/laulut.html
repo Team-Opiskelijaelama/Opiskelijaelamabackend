@@ -39,7 +39,7 @@
 					</tr>
 					<tr th:each ="laulu : ${laulut}" th:attr="data-bs-target=|#accordion${laulu.lauluId}|" data-bs-toggle="collapse" class="accordion-toggle">
     					<td colspan="6" class="hiddenrow">
-    						<div class="accordion-body collapse" th:id="'accordion'+${laulu.lauluId}" th:text="${laulu.sanat}" data-bs-parent="#accordionMain"></div>
+    						<div style="white-space: pre-line" class="accordion-body collapse" th:id="'accordion'+${laulu.lauluId}" th:text="${laulu.sanat}" data-bs-parent="#accordionMain"></div>
     					</td>
 					</tr>
 				</table>

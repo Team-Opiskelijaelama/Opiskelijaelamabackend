@@ -18,7 +18,7 @@ public class Gambinakokous extends Tapahtuma{
 	public Gambinakokous() {
 		super();
 		this.setNimi("Gambinakokous");
-		this.setKuvaus("erää kaverit kokoon ja juokaa kokonainen Gambina-pullo tyhjäksi. Tästä kokouksesta tulee täyttää pöytäkirjapohjan mukainen kokouspöytäkirja ja kokouksella tulee olla puheenjohtaja ja sihteeri. ");
+		this.setKuvaus("Kerää kaverit kokoon ja juokaa kokonainen Gambina-pullo tyhjäksi. Tästä kokouksesta tulee täyttää pöytäkirjapohjan mukainen kokouspöytäkirja ja kokouksella tulee olla puheenjohtaja ja sihteeri. ");
 		this.setHenkilomaara(5);
 		this.setSaannot("Vain pullokädessä saa pitää puheenvuoroja. Kokoukseen varattu pullo tulee tyhjentää kokouksen aikana. Puheenjohtaja ottaa ensimmäisen huikan. ");
 	}

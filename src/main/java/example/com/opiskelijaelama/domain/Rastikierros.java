@@ -30,7 +30,7 @@ public class Rastikierros extends Tapahtuma {
 	public Rastikierros() {
 		super();
 		this.setNimi("Rastikierros");
-		this.setKuvaus("Rastikierros on toiminnallinen tehtäväkierros, josssa seurue kiertää pisteeltä toiselle (tai paikallaan pysyen) suorittamassa erilaisia tehtäviä ryhmässä. Jos seurueita on useita, voidaan tehtävät pisteyttää ja täten seurueet voivat kilpailla keskenään. ");
+		this.setKuvaus("Rastikierros on toiminnallinen tehtäväkierros, jossa seurue kiertää pisteeltä toiselle (tai paikallaan pysyen) suorittamassa erilaisia tehtäviä ryhmässä. Jos seurueita on useita, voidaan tehtävät pisteyttää ja täten seurueet voivat kilpailla keskenään. ");
 		this.setHenkilomaara(2);
 		this.setSaannot("Suoritetusta tehtävästä saa merkinnän. Ryhmälle on syytä valita nimi!");
 	}

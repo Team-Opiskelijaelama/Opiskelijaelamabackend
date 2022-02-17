@@ -1,5 +1,8 @@
 package example.com.opiskelijaelama.web;
 
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class JuomapeliController {
 	
 	// to-do listaa juomapelit

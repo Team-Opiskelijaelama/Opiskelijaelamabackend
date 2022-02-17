@@ -19,7 +19,7 @@
     			<tr th:each = "tapahtuma : ${tapahtumat}">
     				<td th:text="${tapahtuma.nimi}"></td>
     				<td th:text="${tapahtuma.kuvaus}"></td>
-    				<td th:text="${tapahtuma.saannot}"></td>
+    				<td style="white-space: pre-line" th:text="${tapahtuma.saannot}"></td>
     			</tr>
     			</tbody>
     	 	</table>

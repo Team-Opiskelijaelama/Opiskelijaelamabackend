@@ -28,6 +28,8 @@ public class TapahtumaController {
 		model.addAttribute("tapahtumat", tapahtumat);
 		
 		return "index";
+		}
+	
 	}
 	
-}
+

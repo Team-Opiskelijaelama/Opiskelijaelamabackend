@@ -33,7 +33,7 @@ public class Appro extends Tapahtuma {
 	public Appro() {
 		super();
 		this.setNimi("Appro");
-		this.setKuvaus("Baarikierros");
+		this.setKuvaus("Approt ovat opiskelijatapahtuma, jossa kierretään ennakkoon määrättyjä anniskeluravintoloita keräten merkkejä suorituspassiin. Jokaisessa anniskeluravintolassa juodaan juoma, jonka jälkeen saa merkinnän suorituspassiin.");
 		this.setHenkilomaara(2);
 		this.setSaannot("Suoritusmerkinnän saa juomalla vapaavalintaisen juoman kierroksen baarissa. Vain yksi merkintä/baari.");
 	}

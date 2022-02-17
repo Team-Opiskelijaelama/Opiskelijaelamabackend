@@ -28,7 +28,6 @@ public class OpiskelijaelamaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(OpiskelijaelamaApplication.class, args);
 	}
-	//testikommentti
 	@Bean
 	public CommandLineRunner tapahtumaDemo(TapahtumaRepository tapahtumaRepo, TehtavaRepository tehtavaRepo, JuomapeliRepository peliRepo, LauluRepository lauluRepo) {
 		return (args) -> {

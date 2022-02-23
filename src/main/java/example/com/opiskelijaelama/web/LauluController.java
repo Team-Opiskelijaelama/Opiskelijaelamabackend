@@ -20,32 +20,32 @@ public class LauluController {
 	private LauluRepository lauluRepo;
 	
 	@GetMapping("/laulut")
-	public String getAllLaulu(Model model) {
+	public String etsiLaulut(Model model) {
 		model.addAttribute("laulut", lauluRepo.findAll());
 		return "laulut"; //laulut.html
 		
 	}
 	
-	@GetMapping("/addLaulu")
-	public String addLaulu(Model model) {
+	@GetMapping("/lisaaLaulu")
+	public String lisaaLaulu(Model model) {
 		model.addAttribute("laulu", new Laulu());
 		return "lisaalaulu"; //lisaalaulu.html
 	}
 	
-	@PostMapping("/saveLaulu")
-	public String saveLaulu(@ModelAttribute Laulu laulu) {
+	@PostMapping("/tallennaLaulu")
+	public String tallennaLaulu(@ModelAttribute Laulu laulu) {
 		lauluRepo.save(laulu);
 		return "redirect:/laulut"; //laulut.html
 	}
 	
-	@RequestMapping(value = "deleteLaulu/{id}")
-	public String deleteLaulu(@PathVariable("id") Long lauluId, Model model) {
+	@RequestMapping(value = "poistaLaulu/{id}")
+	public String poistaLaulu(@PathVariable("id") Long lauluId, Model model) {
 		lauluRepo.deleteById(lauluId);
 		return "redirect:/laulut";
 	}
 	
-	@RequestMapping(value = "/editLaulu/{id}", method = RequestMethod.GET)
-	public String editLaulu(@PathVariable("id") Long lauluId, Model model) {
+	@RequestMapping(value = "/muokkaaLaulu/{id}", method = RequestMethod.GET)
+	public String muokkaaLaulu(@PathVariable("id") Long lauluId, Model model) {
 		model.addAttribute("laulu", lauluRepo.findById(lauluId).get());
 		return "lisaalaulu";
 		

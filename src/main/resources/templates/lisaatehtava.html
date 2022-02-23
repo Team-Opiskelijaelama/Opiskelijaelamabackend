@@ -6,13 +6,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-	<form th:object="${tehtava}" th:action="@{saveTehtava}" action="#" method="post">
+	<form th:object="${tehtava}" th:action="@{../tallennaTehtava}" action="#" method="post">
 	<input hidden type="text" th:field="*{tehtavaId}" readonly="readonly"/>
-	<label for="tehtavanimi">Nimi</label>
-	<input type="text" id="tehtavanimi" th:field="*{tehtavanimi}" />
+	<label for="tehtavaNimi">Nimi</label>
+	<input type="text" id="tehtavaNimi" th:field="*{tehtavaNimi}" />
 	<br/>
-	<label for="tehtavakuvaus">Kuvaus</label>
-	<input type="text" id="tehtavakuvaus" th:field="*{tehtavakuvaus}" />
+	<label for="tehtavaKuvaus">Kuvaus</label>
+	<input type="text" id="tehtavaKuvaus" th:field="*{tehtavaKuvaus}" />
 	<br/>
 	<input type="submit" value="Tallenna" class="btn btn-success"></input>
 	</form>

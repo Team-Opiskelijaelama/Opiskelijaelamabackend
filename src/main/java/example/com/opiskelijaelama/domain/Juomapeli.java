@@ -12,10 +12,10 @@ public class Juomapeli {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long juomapeliId;
-	private String nimi;
+	private String juomapeliNimi;
 	private String tarvikkeet;
 	@Column(columnDefinition = "varchar(1400)")
-	private String saannot;
+	private String juomapeliSaannot;
 	
 	
 	public Juomapeli() {
@@ -23,17 +23,17 @@ public class Juomapeli {
 		
 	}
 	
-	public Juomapeli(String nimi, String saannot) {
+	public Juomapeli(String juomapeliNimi, String juomapeliSaannot) {
 		super();
-		this.nimi = nimi;
-		this.saannot = saannot;
+		this.juomapeliNimi = juomapeliNimi;
+		this.juomapeliSaannot = juomapeliSaannot;
 	}
 
-	public Juomapeli(String nimi, String tarvikkeet, String saannot) {
+	public Juomapeli(String juomapeliNimi, String tarvikkeet, String juomapeliSaannot) {
 		super();
-		this.nimi = nimi;
+		this.juomapeliNimi = juomapeliNimi;
 		this.tarvikkeet = tarvikkeet;
-		this.saannot = saannot;
+		this.juomapeliSaannot = juomapeliSaannot;
 	}
 
 	public Long getJuomapeliId() {
@@ -44,12 +44,12 @@ public class Juomapeli {
 		this.juomapeliId = juomapeliId;
 	}
 
-	public String getNimi() {
-		return nimi;
+	public String getJuomapeliNimi() {
+		return juomapeliNimi;
 	}
 
-	public void setNimi(String nimi) {
-		this.nimi = nimi;
+	public void setJuomapeliNimi(String juomapeliNimi) {
+		this.juomapeliNimi = juomapeliNimi;
 	}
 
 	public String getTarvikkeet() {
@@ -60,18 +60,18 @@ public class Juomapeli {
 		this.tarvikkeet = tarvikkeet;
 	}
 
-	public String getSaannot() {
-		return saannot;
+	public String getJuomapeliSaannot() {
+		return juomapeliSaannot;
 	}
 
-	public void setSaannot(String saannot) {
-		this.saannot = saannot;
+	public void setJuomapeliSaannot(String juomapeliSaannot) {
+		this.juomapeliSaannot = juomapeliSaannot;
 	}
 
 	@Override
 	public String toString() {
-		return "Juomapeli [juomapeliId=" + juomapeliId + ", nimi=" + nimi + ", tarvikkeet=" + tarvikkeet + ", saannot="
-				+ saannot + "]";
+		return "Juomapeli [juomapeliId=" + juomapeliId + ", nimi=" + juomapeliNimi + ", tarvikkeet=" + tarvikkeet + ", saannot="
+				+ juomapeliSaannot + "]";
 	}
 	
 		

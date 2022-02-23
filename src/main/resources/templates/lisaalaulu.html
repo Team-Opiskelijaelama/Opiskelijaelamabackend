@@ -6,10 +6,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-	<form th:object="${laulu}" th:action="@{../saveLaulu}" action="#" method="post">
+	<form th:object="${laulu}" th:action="@{../tallennaLaulu}" action="#" method="post">
 	<input hidden type="text" th:field="*{lauluId}" readonly="readonly"/>
-	<label for="nimi">Nimi</label>
-	<input type="text" id="nimi" th:field="*{nimi}" />
+	<label for="lauluNimi">Nimi</label>
+	<input type="text" id="lauluNimi" th:field="*{lauluNimi}" />
 	<br/>
 	<label for="savel">Sävel</label>
 	<input type="text" id="savel" th:field="*{savel}" />
@@ -23,7 +23,7 @@
 	<label for="pakollinen">Pakollisuus</label>
 		<select id="pakollisuus" th:field="*{pakollinen}">
        		<option value="true" >Pakollinen</option>
-       		<option value="false">Ei pakollinen</option>
+       		<option value="false" >Ei pakollinen</option>
    		 </select>
    	<br/>
 	<input type="submit" value="Tallenna" class="btn btn-success"></input>

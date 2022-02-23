@@ -21,18 +21,18 @@ public class Tehtava {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long tehtavaId;
-	private String tehtavanimi;
-	private String tehtavakuvaus;
+	private String tehtavaNimi;
+	private String tehtavaKuvaus;
 	
 	@ManyToMany(mappedBy="tehtavalista", fetch = FetchType.LAZY)
 	private List<Rastikierros> rastikierrokset = new ArrayList<Rastikierros>();
 
 	public Tehtava() {}
 
-	public Tehtava(String tehtavanimi, String tehtavakuvaus) {
+	public Tehtava(String tehtavaNimi, String tehtavaKuvaus) {
 		super();
-		this.tehtavanimi = tehtavanimi;
-		this.tehtavakuvaus = tehtavakuvaus;
+		this.tehtavaNimi = tehtavaNimi;
+		this.tehtavaKuvaus = tehtavaKuvaus;
 	}
 
 	public Long getTehtavaId() {
@@ -43,20 +43,20 @@ public class Tehtava {
 		this.tehtavaId = tehtavaId;
 	}
 
-	public String getTehtavanimi() {
-		return tehtavanimi;
+	public String getTehtavaNimi() {
+		return tehtavaNimi;
 	}
 
-	public void setTehtavanimi(String tehtavanimi) {
-		this.tehtavanimi = tehtavanimi;
+	public void setTehtavaNimi(String tehtavaNimi) {
+		this.tehtavaNimi = tehtavaNimi;
 	}
 
-	public String getTehtavakuvaus() {
-		return tehtavakuvaus;
+	public String getTehtavaKuvaus() {
+		return tehtavaKuvaus;
 	}
 
-	public void setTehtavakuvaus(String tehtavakuvaus) {
-		this.tehtavakuvaus = tehtavakuvaus;
+	public void setTehtavaKuvaus(String tehtavaKuvaus) {
+		this.tehtavaKuvaus = tehtavaKuvaus;
 	}
 
 	public List<Rastikierros> getRastikierrokset() {
@@ -80,7 +80,7 @@ public class Tehtava {
 
 	@Override
 	public String toString() {
-		return "Tehtava [tehtavaId=" + tehtavaId + ", tehtavanimi=" + tehtavanimi + ", tehtavakuvaus=" + tehtavakuvaus
+		return "Tehtava [tehtavaId=" + tehtavaId + ", tehtavanimi=" + tehtavaNimi + ", tehtavakuvaus=" + tehtavaKuvaus
 				+ "]";
 	};
 	

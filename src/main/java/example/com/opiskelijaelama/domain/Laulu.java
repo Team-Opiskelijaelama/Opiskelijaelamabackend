@@ -23,7 +23,7 @@ public class Laulu {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long lauluId;
 	
-	private String nimi;
+	private String lauluNimi;
 	
 	@Column(columnDefinition = "varchar(1500)")
 	private String sanat;
@@ -44,24 +44,24 @@ public class Laulu {
 		super();
 	}
 	
-	public Laulu(String nimi, String sanat, Boolean pakollinen) {
+	public Laulu(String lauluNimi, String sanat, Boolean pakollinen) {
 		super();
-		this.nimi = nimi;
+		this.lauluNimi = lauluNimi;
 		this.sanat = sanat;
 		this.pakollinen = pakollinen;
 	}
 	
-	public Laulu(String nimi, String sanat, String savel, Boolean pakollinen) {
+	public Laulu(String lauluNimi, String sanat, String savel, Boolean pakollinen) {
 		super();
-		this.nimi = nimi;
+		this.lauluNimi = lauluNimi;
 		this.sanat = sanat;
 		this.savel = savel;
 		this.pakollinen = pakollinen;
 	}
 	
-	public Laulu(String nimi, String sanat, String savel, String ohje, Boolean pakollinen) {
+	public Laulu(String lauluNimi, String sanat, String savel, String ohje, Boolean pakollinen) {
 		super();
-		this.nimi = nimi;
+		this.lauluNimi = lauluNimi;
 		this.sanat = sanat;
 		this.savel = savel;
 		this.ohje = ohje;
@@ -76,12 +76,12 @@ public class Laulu {
 		this.lauluId = lauluId;
 	}
 
-	public String getNimi() {
-		return nimi;
+	public String getLauluNimi() {
+		return lauluNimi;
 	}
 
-	public void setNimi(String nimi) {
-		this.nimi = nimi;
+	public void setLauluNimi(String lauluNimi) {
+		this.lauluNimi = lauluNimi;
 	}
 
 	public String getSanat() {
@@ -137,7 +137,7 @@ public class Laulu {
 
 	@Override
 	public String toString() {
-		return "Laulu [lauluId=" + lauluId + ", nimi=" + nimi + ", sanat=" + sanat + ", savel=" + savel + ", ohje="
+		return "Laulu [lauluId=" + lauluId + ", nimi=" + lauluNimi + ", sanat=" + sanat + ", savel=" + savel + ", ohje="
 				+ ohje + ", pakollinen=" + pakollinen + "]";
 	}
 	

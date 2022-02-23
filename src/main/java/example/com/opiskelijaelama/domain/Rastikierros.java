@@ -62,7 +62,7 @@ public class Rastikierros extends Tapahtuma {
 		this.tehtavalista = tehtavalista;
 	}
 
-	public ArrayList<Boolean> isSuorituspassi() {
+	public ArrayList<Boolean> getSuorituspassi() {
 		return suorituspassi;
 	}
 

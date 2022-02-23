@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,7 +19,6 @@ import example.com.opiskelijaelama.domain.Tapahtuma;
 import example.com.opiskelijaelama.domain.TapahtumaRepository;
 
 
-@CrossOrigin
 @RestController
 @RequestMapping(value = "/rest")
 public class RestApiController {
@@ -49,7 +47,7 @@ public class RestApiController {
 		LocalDate pvm = LocalDate.now();
 		DateTimeFormatter muotoilija = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 		
-		appro.setNimi(appro.getNimi() + " " + muotoilija.format(pvm));
+		appro.setTapahtumaNimi(appro.getTapahtumaNimi() + " " + muotoilija.format(pvm));
 
         return appro;
     } 
@@ -62,7 +60,7 @@ public class RestApiController {
 		LocalDate pvm = LocalDate.now();
 		DateTimeFormatter muotoilija = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 		
-		gambinakokous.setNimi(gambinakokous.getNimi() + " " + muotoilija.format(pvm));
+		gambinakokous.setTapahtumaNimi(gambinakokous.getTapahtumaNimi() + " " + muotoilija.format(pvm));
 
         return gambinakokous;
     } 
@@ -75,7 +73,7 @@ public class RestApiController {
 		LocalDate pvm = LocalDate.now();
 		DateTimeFormatter muotoilija = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 		
-		rastikierros.setNimi(rastikierros.getNimi() + " " + muotoilija.format(pvm));
+		rastikierros.setTapahtumaNimi(rastikierros.getTapahtumaNimi() + " " + muotoilija.format(pvm));
 		
         return rastikierros;
     } 
@@ -88,7 +86,7 @@ public class RestApiController {
 		LocalDate pvm = LocalDate.now();
 		DateTimeFormatter muotoilija = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 		
-		sitsit.setNimi(sitsit.getNimi() + " " + muotoilija.format(pvm));
+		sitsit.setTapahtumaNimi(sitsit.getTapahtumaNimi() + " " + muotoilija.format(pvm));
 
         return sitsit;
     } 

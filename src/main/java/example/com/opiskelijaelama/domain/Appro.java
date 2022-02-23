@@ -32,29 +32,30 @@ public class Appro extends Tapahtuma {
 	
 	public Appro() {
 		super();
-		this.setNimi("Appro");
-		this.setKuvaus("Approt ovat opiskelijatapahtuma, jossa kierretään ennakkoon määrättyjä anniskeluravintoloita keräten merkkejä suorituspassiin. Jokaisessa anniskeluravintolassa juodaan juoma, jonka jälkeen saa merkinnän suorituspassiin.");
+		this.setTapahtumaNimi("Appro");
+		this.setTapahtumaKuvaus("Approt ovat opiskelijatapahtuma, jossa kierretään ennakkoon määrättyjä anniskeluravintoloita keräten merkkejä suorituspassiin. Jokaisessa anniskeluravintolassa juodaan juoma, jonka jälkeen saa merkinnän suorituspassiin.");
 		this.setHenkilomaara(2);
-		this.setSaannot("Suoritusmerkinnän saa juomalla vapaavalintaisen juoman kierroksen baarissa. Vain yksi merkintä/baari.");
+		this.setTapahtumaSaannot("Suoritusmerkinnän saa juomalla vapaavalintaisen juoman kierroksen baarissa. Vain yksi merkintä/baari.");
 	}
 	
-	public Appro(String nimi) {
+	public Appro(String tapahtumaNimi) {
 		super();
-		this.setNimi(nimi);
+		this.setTapahtumaNimi(tapahtumaNimi);
 	}
 
-	public Appro(String nimi, String saannot, int henkilomaara, ArrayList<Boolean> appropassi) {
+	public Appro(String tapahtumaNimi, String tapahtumaKuvaus, String tapahtumaSaannot, int henkilomaara, ArrayList<Boolean> appropassi) {
 		super();
-		this.setNimi(nimi);
-		this.setSaannot(saannot);
+		this.setTapahtumaNimi(tapahtumaNimi);
+		this.setTapahtumaKuvaus(tapahtumaKuvaus);
+		this.setTapahtumaSaannot(tapahtumaSaannot);
 		this.setHenkilomaara(henkilomaara);
 		this.appropassi= appropassi;
 	}
 	
-	public Appro(String nimi, String saannot, int henkilomaara, ArrayList<Boolean> appropassi, List<Ravintola> ravintolalista) {
+	public Appro(String tapahtumaNimi, String tapahtumaSaannot, int henkilomaara, ArrayList<Boolean> appropassi, List<Ravintola> ravintolalista) {
 		super();
-		this.setNimi(nimi);
-		this.setSaannot(saannot);
+		this.setTapahtumaNimi(tapahtumaNimi);
+		this.setTapahtumaSaannot(tapahtumaSaannot);
 		this.setHenkilomaara(henkilomaara);
 		this.appropassi= appropassi;
 		this.ravintolalista = ravintolalista; 
@@ -91,7 +92,7 @@ public class Appro extends Tapahtuma {
 	@Override
 	public String toString() {
 		return "Approt [appropassi=" + appropassi + ", ravintolalista=" + ravintolalista + ", getTapahtumaId()="
-				+ getTapahtumaId() + ", getNimi()=" + getNimi() + ", getSannot()=" + getSaannot()
+				+ getTapahtumaId() + ", getNimi()=" + getTapahtumaNimi() + ", getTapahtumaKuvaus()=" + getTapahtumaKuvaus() + ", getTapahtumaSaannot()=" + getTapahtumaSaannot()
 				+ ", getHenkilomaara()=" + getHenkilomaara() + "]";
 	}
 	

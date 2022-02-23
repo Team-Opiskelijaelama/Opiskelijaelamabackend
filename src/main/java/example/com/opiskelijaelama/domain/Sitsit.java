@@ -32,10 +32,10 @@ public class Sitsit extends Tapahtuma {
 	
 	public Sitsit() {
 		super();
-		this.setNimi("Sitsit");
-		this.setKuvaus("Sitsit ovat akateeminen pöytäjuhla, jossa opiskelijat kokoontuvat yhteisen pöydän ääreen syömään, juomaan ja laulamaan juomalauluja. Sitseillä voi olla erilaisia teemoja, joiden mukaan valitaan ruoat ja kenties osa lauluista. Tapahtuma koostuu 3 osasta, joiden välillä on lyhyt (n. 20 min) tauko. Perinteisesti jokaisella osalla on oma ruokalajinsa, joka tarjoillaan (alkupala, pääruoka, jälkiruoka). Sitseille on hyvä varata erilaisia juomia; aina vettä sekä lisäksi oman maun mukaan muita mietoja juomia ja snapsit (perinteisesti Koskenkorva ja Jaloviina, alkoholittomille osallistujille esim. inkiväärishotti). Sitseillä laulettavat juomalaulut löytyvät tapahtuman omasta laulukirjasta.");
+		this.setTapahtumaNimi("Sitsit");
+		this.setTapahtumaKuvaus("Sitsit ovat akateeminen pöytäjuhla, jossa opiskelijat kokoontuvat yhteisen pöydän ääreen syömään, juomaan ja laulamaan juomalauluja. Sitseillä voi olla erilaisia teemoja, joiden mukaan valitaan ruoat ja kenties osa lauluista. Tapahtuma koostuu 3 osasta, joiden välillä on lyhyt (n. 20 min) tauko. Perinteisesti jokaisella osalla on oma ruokalajinsa, joka tarjoillaan (alkupala, pääruoka, jälkiruoka). Sitseille on hyvä varata erilaisia juomia; aina vettä sekä lisäksi oman maun mukaan muita mietoja juomia ja snapsit (perinteisesti Koskenkorva ja Jaloviina, alkoholittomille osallistujille esim. inkiväärishotti). Sitseillä laulettavat juomalaulut löytyvät tapahtuman omasta laulukirjasta.");
 		this.setHenkilomaara(6);
-		this.setSaannot("Sitsipöytään ei saa istua ennen lupaa. Sitsejä johtava toastmaster aloittaa sitsit esittelemällä itsensä, antamalla sitsikansalle luvan istua pöydän ääreen ja kertaamalla sitsisäännöt. Sitsipöydästä ei myöskään ole kohteliasta nousta ilman lupaa (poikkeuksena ilmoitetut tauot, joiden aikana pöydästä poistuminen on sallittua). Luvan voi pyytää puheenvuorolla toastmasterilta. \r\n"
+		this.setTapahtumaSaannot("Sitsipöytään ei saa istua ennen lupaa. Sitsejä johtava toastmaster aloittaa sitsit esittelemällä itsensä, antamalla sitsikansalle luvan istua pöydän ääreen ja kertaamalla sitsisäännöt. Sitsipöydästä ei myöskään ole kohteliasta nousta ilman lupaa (poikkeuksena ilmoitetut tauot, joiden aikana pöydästä poistuminen on sallittua). Luvan voi pyytää puheenvuorolla toastmasterilta. \r\n"
 				+ "\r\n"
 				+ "Toastmaster jakaa puheenvuorot, hyväksyy laulutoiveet, rankaisee sääntöjen rikkojia ja ilmoittaa tauot. Puheenvuoron saa kilistelemällä omaa lasia tai viittaamalla (toastmaster määrittelee tyylin). Puheenvuoron ajaksi noustaan seisomaan ja sen alussa puhuja aina tervehtii sitsikansaa ja toastmasteria sekä esittelee itsensä. Muut tervehtivät puhujaa ”Hei, *kerrottu nimi*”. (Mikäli nimeä ei mainita, muu sitsikansa voi huutaa puhujan päälle ”KUKA SÄ OOT?”) Puheenvuoron pitäjälle voidaan esittää myös kysymyksiä (Ooksä sinkku? Onks sul metsää? tms). \r\n"
 				+ "\r\n"
@@ -54,18 +54,19 @@ public class Sitsit extends Tapahtuma {
 				+ "\r\n11. Lauluja voi jatkaa, mikäli osaa niihin lisäsäkeistöjä. Laulu päättyy, kun toastmaster huutaa “Skål!” ";
 		}
 
-	public Sitsit(String nimi, String saannot, int henkilomaara, String kaytos) {
+	public Sitsit(String tapahtumaNimi, String tapahtumaKuvaus, int henkilomaara, String kaytos) {
 		super();
-		this.setNimi(nimi);
-		this.setSaannot(saannot);
+		this.setTapahtumaNimi(tapahtumaNimi);
+		this.setTapahtumaKuvaus(tapahtumaKuvaus);
 		this.setHenkilomaara(henkilomaara);
 		this.kaytos = kaytos;
 	}
 
-	public Sitsit(String nimi, String saannot, int henkilomaara, String toastmaster, String kaytos, List<Laulu> laulukirja) {
+	public Sitsit(String tapahtumaNimi, String tapahtumaKuvaus, String tapahtumaSaannot, int henkilomaara, String toastmaster, String kaytos, List<Laulu> laulukirja) {
 		super();
-		this.setNimi(nimi);
-		this.setSaannot(saannot);
+		this.setTapahtumaNimi(tapahtumaNimi);
+		this.setTapahtumaKuvaus(tapahtumaKuvaus);
+		this.setTapahtumaSaannot(tapahtumaSaannot);
 		this.setHenkilomaara(henkilomaara);
 		this.toastmaster = toastmaster;
 		this.kaytos = kaytos;
@@ -110,8 +111,8 @@ public class Sitsit extends Tapahtuma {
 	@Override
 	public String toString() {
 		return "Sitsit [toastmaster=" + toastmaster + ", kaytos=" + kaytos + ", laulukirja=" + laulukirja
-				+ ", getTapahtumaId()=" + getTapahtumaId() + ", getNimi()=" + getNimi() + ", getSaannot()="
-				+ getSaannot() + ", getHenkilomaara()=" + getHenkilomaara() +  "]";
+				+ ", getTapahtumaId()=" + getTapahtumaId() + ", getNimi()=" + getTapahtumaNimi() +", getTapahtumaKuvaus()=" + getTapahtumaKuvaus() + ", getTapahtumaSaannot()="
+				+ getTapahtumaSaannot() + ", getHenkilomaara()=" + getHenkilomaara() +  "]";
 	}
 	
 }

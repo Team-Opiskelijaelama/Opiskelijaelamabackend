@@ -21,11 +21,11 @@ public class Tapahtuma {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long tapahtumaId;
 	
-	private String nimi;
+	private String tapahtumaNimi;
 	@Column(columnDefinition = "varchar(690)")
-	private String kuvaus;
+	private String tapahtumaKuvaus;
 	@Column(columnDefinition = "varchar(1500)")
-	private String saannot;
+	private String tapahtumaSaannot;
 	private int henkilomaara;
 	
 	
@@ -41,28 +41,28 @@ public class Tapahtuma {
 		this.tapahtumaId = tapahtumaId;
 	}
 
-	public String getNimi() {
-		return nimi;
+	public String getTapahtumaNimi() {
+		return tapahtumaNimi;
 	}
 
-	public void setNimi(String nimi) {
-		this.nimi = nimi;
+	public void setTapahtumaNimi(String tapahtumaNimi) {
+		this.tapahtumaNimi = tapahtumaNimi;
 	}
 	
-	public String getKuvaus() {
-		return kuvaus;
+	public String getTapahtumaKuvaus() {
+		return tapahtumaKuvaus;
 	}
 
-	public void setKuvaus(String kuvaus) {
-		this.kuvaus = kuvaus;
+	public void setTapahtumaKuvaus(String tapahtumaKuvaus) {
+		this.tapahtumaKuvaus = tapahtumaKuvaus;
 	}
 
-	public String getSaannot() {
-		return saannot;
+	public String getTapahtumaSaannot() {
+		return tapahtumaSaannot;
 	}
 
-	public void setSaannot(String saannot) {
-		this.saannot = saannot;
+	public void setTapahtumaSaannot(String tapahtumaSaannot) {
+		this.tapahtumaSaannot = tapahtumaSaannot;
 	}
 
 	public int getHenkilomaara() {
@@ -75,8 +75,8 @@ public class Tapahtuma {
 
 	@Override
 	public String toString() {
-		return "Tapahtuma [tapahtumaId=" + tapahtumaId + ", nimi=" + nimi + ", kuvaus=" + kuvaus + ", saannot="
-				+ saannot + ", henkilomaara=" + henkilomaara + "]";
+		return "Tapahtuma [tapahtumaId=" + tapahtumaId + ", nimi=" + tapahtumaNimi + ", kuvaus=" + tapahtumaKuvaus + ", saannot="
+				+ tapahtumaSaannot + ", henkilomaara=" + henkilomaara + "]";
 	}
 }
 

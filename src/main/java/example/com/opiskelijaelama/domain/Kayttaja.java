@@ -14,7 +14,7 @@ public class Kayttaja {
 	private long kayttajaId;
 	
     @Column(name = "nimi", nullable = false, unique = true)
-	private String nimi;
+	private String kayttajaNimi;
 	private String rooli;
 	private String salasana;
 	
@@ -24,9 +24,9 @@ public class Kayttaja {
 		super();
 	}
 
-	public Kayttaja(String nimi, String rooli, String salasana) {
+	public Kayttaja(String kayttajaNimi, String rooli, String salasana) {
 		super();
-		this.nimi = nimi;
+		this.kayttajaNimi = kayttajaNimi;
 		this.rooli = rooli;
 		this.salasana = salasana;
 	}
@@ -39,12 +39,12 @@ public class Kayttaja {
 		this.kayttajaId = kayttajaId;
 	}
 
-	public String getNimi() {
-		return nimi;
+	public String getKayttajaNimi() {
+		return kayttajaNimi;
 	}
 
-	public void setNimi(String nimi) {
-		this.nimi = nimi;
+	public void setKayttajaNimi(String kayttajaNimi) {
+		this.kayttajaNimi = kayttajaNimi;
 	}
 
 	public String getRooli() {
@@ -65,7 +65,7 @@ public class Kayttaja {
 
 	@Override
 	public String toString() {
-		return "Käyttäjä [kayttajaId=" + kayttajaId + ", nimi=" + nimi + ", rooli=" + rooli + ", salasana=" + salasana
+		return "Käyttäjä [kayttajaId=" + kayttajaId + ", nimi=" + kayttajaNimi + ", rooli=" + rooli + ", salasana=" + salasana
 				+ "]";
 	}
 }

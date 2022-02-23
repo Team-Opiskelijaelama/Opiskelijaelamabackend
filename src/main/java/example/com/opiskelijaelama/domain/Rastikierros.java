@@ -1,4 +1,5 @@
 package example.com.opiskelijaelama.domain;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,34 +30,34 @@ public class Rastikierros extends Tapahtuma {
 	
 	public Rastikierros() {
 		super();
-		this.setNimi("Rastikierros");
-		this.setKuvaus("Rastikierros on toiminnallinen tehtäväkierros, jossa seurue kiertää pisteeltä toiselle (tai paikallaan pysyen) suorittamassa erilaisia tehtäviä ryhmässä. Jos seurueita on useita, voidaan tehtävät pisteyttää ja täten seurueet voivat kilpailla keskenään. ");
+		this.setTapahtumaNimi("Rastikierros");
+		this.setTapahtumaKuvaus("Rastikierros on toiminnallinen tehtäväkierros, jossa seurue kiertää pisteeltä toiselle (tai paikallaan pysyen) suorittamassa erilaisia tehtäviä ryhmässä. Jos seurueita on useita, voidaan tehtävät pisteyttää ja täten seurueet voivat kilpailla keskenään. ");
 		this.setHenkilomaara(2);
-		this.setSaannot("Suoritetusta tehtävästä saa merkinnän. Ryhmälle on syytä valita nimi!");
+		this.setTapahtumaSaannot("Suoritetusta tehtävästä saa merkinnän. Ryhmälle on syytä valita nimi!");
 	}
 	
-	public Rastikierros(String nimi, String kuvaus, String saannot, int henkilomaara) {
+	public Rastikierros(String tapahtumaNimi, String tapahtumaKuvaus, String tapahtumaSaannot, int henkilomaara) {
 		super();
-		this.setNimi(nimi);
-		this.setKuvaus(kuvaus);
-		this.setSaannot(saannot);
+		this.setTapahtumaNimi(tapahtumaNimi);
+		this.setTapahtumaKuvaus(tapahtumaKuvaus);
+		this.setTapahtumaSaannot(tapahtumaSaannot);
 		this.setHenkilomaara(henkilomaara);
 	}
 
-	public Rastikierros(String nimi, String kuvaus, String saannot, int henkilomaara, ArrayList <Boolean> suorituspassi) {
+	public Rastikierros(String tapahtumaNimi, String tapahtumaKuvaus, String tapahtumaSaannot, int henkilomaara, ArrayList <Boolean> suorituspassi) {
 		super();
-		this.setNimi(nimi);
-		this.setKuvaus(kuvaus);
-		this.setSaannot(saannot);
+		this.setTapahtumaNimi(tapahtumaNimi);
+		this.setTapahtumaKuvaus(tapahtumaKuvaus);
+		this.setTapahtumaSaannot(tapahtumaSaannot);
 		this.setHenkilomaara(henkilomaara);
 		this.suorituspassi = suorituspassi;
 	}
 
-	public Rastikierros(String nimi, String kuvaus, String saannot, int henkilomaara, ArrayList<Boolean> suorituspassi, List<Tehtava> tehtavalista) {
+	public Rastikierros(String tapahtumaNimi, String tapahtumaKuvaus, String tapahtumaSaannot, int henkilomaara, ArrayList<Boolean> suorituspassi, List<Tehtava> tehtavalista) {
 		super();
-		this.setNimi(nimi);
-		this.setKuvaus(kuvaus);
-		this.setSaannot(saannot);
+		this.setTapahtumaNimi(tapahtumaNimi);
+		this.setTapahtumaKuvaus(tapahtumaKuvaus);
+		this.setTapahtumaSaannot(tapahtumaSaannot);
 		this.setHenkilomaara(henkilomaara);
 		this.suorituspassi = suorituspassi;
 		this.tehtavalista = tehtavalista;
@@ -92,7 +93,7 @@ public class Rastikierros extends Tapahtuma {
 	@Override
 	public String toString() {
 		return "Rastikierros [suorituspassi=" + suorituspassi + ", tehtavalista=" + tehtavalista + ", getTapahtumaId()="
-				+ getTapahtumaId() + ", getNimi()=" + getNimi() + ", getSaannot()=" + getSaannot()
+				+ getTapahtumaId() + ", getNimi()=" + getTapahtumaNimi() + ", getTapahtumaKuvaus()"  + getTapahtumaKuvaus() + ", getTapahtumaSaannot()=" + getTapahtumaSaannot()
 				+ ", getHenkilomaara()=" + getHenkilomaara() + "]";
 	}
 

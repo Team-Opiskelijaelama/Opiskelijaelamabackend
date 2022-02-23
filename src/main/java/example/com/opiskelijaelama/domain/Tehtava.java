@@ -82,7 +82,6 @@ public class Tehtava {
 	public String toString() {
 		return "Tehtava [tehtavaId=" + tehtavaId + ", tehtavanimi=" + tehtavaNimi + ", tehtavakuvaus=" + tehtavaKuvaus
 				+ "]";
-	};
-	
+	}
 	
 }

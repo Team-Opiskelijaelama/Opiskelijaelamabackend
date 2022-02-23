@@ -45,7 +45,7 @@ public class TehtavaController {
 	}
 	
 	@RequestMapping(value = "/muokkaaTehtava/{id}", method = RequestMethod.GET)
-	public String muokkaaLaulu(@PathVariable("id") Long tehtavaId, Model model) {
+	public String muokkaaTehtava(@PathVariable("id") Long tehtavaId, Model model) {
 		model.addAttribute("tehtava", tehtavaRepo.findById(tehtavaId).get());
 		return "lisaatehtava";
 		

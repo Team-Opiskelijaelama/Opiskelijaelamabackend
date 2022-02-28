@@ -1,6 +1,7 @@
 package example.com.opiskelijaelama.web;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,12 +23,8 @@ public class TapahtumaController {
 	public String listaaTapahtumat(Model model) {
 		
 		//Tapahtuma appro = repository.etsiAppro(Long.valueOf(4));
-		List<Tapahtuma> tapahtumat = new ArrayList<Tapahtuma>();
-		tapahtumat.add(repository.etsiAppro(Long.valueOf(4)));
-		tapahtumat.add(repository.etsiGambinakokous(Long.valueOf(4)));
-		tapahtumat.add(repository.etsiRastikierros(Long.valueOf(4)));
-		tapahtumat.add(repository.etsiSitsit(Long.valueOf(4)));
-		
+		List<Tapahtuma> tapahtumat = repository.etsiTapahtumatiedot(Long.valueOf(4));
+		Collections.sort(tapahtumat);
 		model.addAttribute("tapahtumat", tapahtumat);
 		
 		return "index";

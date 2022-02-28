@@ -15,7 +15,7 @@ import javax.persistence.Table;
 @Inheritance(strategy=InheritanceType.JOINED)
 @DiscriminatorColumn(name="TAPAHTUMA_TYYPPI")
 @Table(name="TAPAHTUMA")
-public class Tapahtuma {
+public class Tapahtuma implements Comparable<Tapahtuma>{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -71,6 +71,14 @@ public class Tapahtuma {
 
 	public void setHenkilomaara(int henkilomaara) {
 		this.henkilomaara = henkilomaara;
+	}
+	
+	//Metodi, jotta tapahtumat saada aakkosjärjestykseen
+	@Override
+	public int compareTo(Tapahtuma tapahtuma) {
+	
+		   return this.tapahtumaNimi.compareTo(tapahtuma.getTapahtumaNimi());
+		   
 	}
 
 	@Override

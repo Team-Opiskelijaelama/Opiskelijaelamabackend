@@ -522,6 +522,18 @@ public class OpiskelijaelamaApplication {
 			lauluRepo.save(laulu1);
 			lauluRepo.save(laulu2);
 			lauluRepo.save(laulu3);
+			lauluRepo.save(laulu4);
+			lauluRepo.save(laulu5);
+			lauluRepo.save(laulu6);
+			lauluRepo.save(laulu7);
+			lauluRepo.save(laulu8);
+			lauluRepo.save(laulu9);
+			lauluRepo.save(laulu10);
+			lauluRepo.save(laulu11);
+			lauluRepo.save(laulu12);
+			lauluRepo.save(laulu13);
+
+			
 		};
 	}
 

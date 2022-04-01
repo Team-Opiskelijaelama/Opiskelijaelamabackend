@@ -25,7 +25,7 @@ public class Laulu {
 	
 	private String lauluNimi;
 	
-	@Column(columnDefinition = "varchar(1500)")
+	@Column(columnDefinition = "varchar(2500)")
 	private String sanat;
 	
 	private String savel;

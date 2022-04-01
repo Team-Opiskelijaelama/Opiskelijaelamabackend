@@ -28,11 +28,11 @@ public class RestApiController {
 	@Autowired
 	private TapahtumaRepository repository;
 
-	// Tapahtumien 1-5 haku (tiedot kaikista tapahtumista fronttia varten)
+	// Tapahtumien 1-4 haku (tiedot kaikista tapahtumista fronttia varten)
 	@RequestMapping(value="/tapahtumat", method = RequestMethod.GET)
     public @ResponseBody List<Tapahtuma> tapahtumatiedotRest() {
 		
-		List<Tapahtuma> tapahtumat = repository.etsiTapahtumatiedot(Long.valueOf(5));
+		List<Tapahtuma> tapahtumat = repository.etsiTapahtumatiedot(Long.valueOf(4));
 		Collections.sort(tapahtumat);
         return tapahtumat;
     } 
@@ -54,10 +54,6 @@ public class RestApiController {
 		  		Tapahtuma gambinakokous = new Gambinakokous();
 				gambinakokous.setTapahtumaNimi(gambinakokous.getTapahtumaNimi() + " " + muotoilija.format(pvm));
 				return gambinakokous;
-		  	case "J":
-		  		Tapahtuma juomapeli = new Juomapeli();
-				juomapeli.setTapahtumaNimi(juomapeli.getTapahtumaNimi() + " " + muotoilija.format(pvm));
-				return juomapeli;
 		  	case "R":
 		  		Tapahtuma rastikierros = new Rastikierros();
 				rastikierros.setTapahtumaNimi(rastikierros.getTapahtumaNimi() + " " + muotoilija.format(pvm));

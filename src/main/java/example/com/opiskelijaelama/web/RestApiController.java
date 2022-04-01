@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import example.com.opiskelijaelama.domain.Appro;
 import example.com.opiskelijaelama.domain.Gambinakokous;
 import example.com.opiskelijaelama.domain.Juomapeli;
+import example.com.opiskelijaelama.domain.JuomapeliRepository;
 import example.com.opiskelijaelama.domain.Rastikierros;
 import example.com.opiskelijaelama.domain.Sitsit;
 import example.com.opiskelijaelama.domain.Tapahtuma;
@@ -24,6 +25,16 @@ import example.com.opiskelijaelama.domain.TapahtumaRepository;
 @RestController
 @RequestMapping(value = "/rest")
 public class RestApiController {
+	
+	@Autowired 
+	private JuomapeliRepository pelirepo; 
+	
+    // juomapelit
+    @RequestMapping(value="/juomapelit", method = RequestMethod.GET)
+    public List<Juomapeli> JuomapeliRepository()
+    {	
+        return pelirepo.findAll();
+    }    
 	
 	@Autowired
 	private TapahtumaRepository repository;

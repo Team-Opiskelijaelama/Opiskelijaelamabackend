@@ -11,11 +11,11 @@ import example.com.opiskelijaelama.domain.JuomapeliRepository;
 public class JuomapeliController {
 	
 	@Autowired
-	private JuomapeliRepository juomapeliRepo;
+	private JuomapeliRepository peliRepo;
 	
 	@GetMapping("/juomapelit")
 	public String etsiJuomapelit(Model model) {
-		model.addAttribute("juomapelit", juomapeliRepo.findAll());
+		model.addAttribute("juomapelit", peliRepo.findAll());
 		return "juomapelit"; //juomapelit.html
 		
 	}

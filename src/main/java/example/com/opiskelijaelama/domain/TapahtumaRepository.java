@@ -8,7 +8,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface TapahtumaRepository extends CrudRepository<Tapahtuma, Long>{
 
 
-	//ensimmäiset 5 ovat tapahtumatietojen hakuun fronttia varten
+	//ensimmäiset 4 ovat tapahtumatietojen hakuun fronttia varten
 	@Query(value = "Select * "
 			+ "from tapahtuma "
 			+ "left join appro on appro.tapahtuma_id = tapahtuma.tapahtuma_id "

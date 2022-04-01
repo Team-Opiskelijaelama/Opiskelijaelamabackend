@@ -1,13 +1,17 @@
 package example.com.opiskelijaelama.domain;
 
 import javax.persistence.Column;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class Juomapeli {
+@DiscriminatorValue("J")
+@Table(name="JUOMAPELI")
+public class Juomapeli extends Tapahtuma{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +24,10 @@ public class Juomapeli {
 	
 	public Juomapeli() {
 		super();
+		this.setTapahtumaNimi("Juomapeli");
+		this.setTapahtumaKuvaus("Seurapelejä, joissa tarkoituksena on nauttia alkoholijuomia. Juomapeleissä olennaista on yleensä hauskanpito, ei vakava pelaaminen.");
+		this.setHenkilomaara(1);
+		this.setTapahtumaSaannot("Riippuu juomapelistä.");
 		
 	}
 	

@@ -1,18 +1,23 @@
 package example.com.opiskelijaelama.web;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import example.com.opiskelijaelama.domain.JuomapeliRepository;
 
 @Controller
 public class JuomapeliController {
 	
-	// to-do listaa juomapelit
+	@Autowired
+	private JuomapeliRepository juomapeliRepo;
 	
-	//to-do uusi juomapeli
-
-	//to-do tallenna juomapeli
-	
-	//to-do muokkaajuomapeliä
-	
-	//to do poista juomapeli
+	@GetMapping("/juomapelit")
+	public String etsiJuomapelit(Model model) {
+		model.addAttribute("juomapelit", juomapeliRepo.findAll());
+		return "juomapelit"; //juomapelit.html
+		
+	}
 
 }

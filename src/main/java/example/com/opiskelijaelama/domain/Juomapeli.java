@@ -78,8 +78,8 @@ public class Juomapeli extends Tapahtuma{
 
 	@Override
 	public String toString() {
-		return "Juomapeli [juomapeliId=" + juomapeliId + ", nimi=" + juomapeliNimi + ", tarvikkeet=" + tarvikkeet + ", saannot="
-				+ juomapeliSaannot + "]";
+		return "Juomapeli [getJuomapeliId()=" + 
+	getJuomapeliId() + ", getJuomapeliNimi()=" + getJuomapeliNimi() + ", getTarvikkeet()=" + getTarvikkeet() + ", getJuomapeliSaannot()=" + getJuomapeliSaannot() +"]";
 	}
 	
 		

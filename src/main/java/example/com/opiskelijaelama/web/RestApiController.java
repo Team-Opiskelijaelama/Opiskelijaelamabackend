@@ -16,10 +16,14 @@ import example.com.opiskelijaelama.domain.Appro;
 import example.com.opiskelijaelama.domain.Gambinakokous;
 import example.com.opiskelijaelama.domain.Juomapeli;
 import example.com.opiskelijaelama.domain.JuomapeliRepository;
+import example.com.opiskelijaelama.domain.Laulu;
 import example.com.opiskelijaelama.domain.Rastikierros;
 import example.com.opiskelijaelama.domain.Sitsit;
 import example.com.opiskelijaelama.domain.Tapahtuma;
 import example.com.opiskelijaelama.domain.TapahtumaRepository;
+import example.com.opiskelijaelama.domain.Tehtava;
+import example.com.opiskelijaelama.domain.LauluRepository;
+import example.com.opiskelijaelama.domain.TehtavaRepository;
 
 
 @RestController
@@ -35,6 +39,26 @@ public class RestApiController {
     {	
         return pelirepo.findAll();
     }    
+    
+	@Autowired 
+	private LauluRepository laulurepo; 
+    
+    // laulut
+    @RequestMapping(value="/laulut", method = RequestMethod.GET)
+    public List<Laulu> LauluRepository()
+    {	
+        return laulurepo.findAll();
+    }   
+    
+	@Autowired 
+	private TehtavaRepository tehtavarepo; 
+    
+    // tehtävät
+    @RequestMapping(value="/tehtavat", method = RequestMethod.GET)
+    public List<Tehtava> TehtavaRepository()
+    {	
+        return tehtavarepo.findAll();
+    }   
 	
 	@Autowired
 	private TapahtumaRepository repository;

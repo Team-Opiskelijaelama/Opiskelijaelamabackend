@@ -1,8 +1,12 @@
 package example.com.opiskelijaelama.domain;
 
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 
-public interface LauluRepository extends CrudRepository<Laulu, Long> {
+public interface LauluRepository extends JpaRepository<Laulu, Long> {
+	List<Laulu> findAll();
 	
 	
 	

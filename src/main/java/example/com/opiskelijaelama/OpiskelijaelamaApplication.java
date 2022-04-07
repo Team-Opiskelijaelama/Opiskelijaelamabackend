@@ -40,10 +40,16 @@ public class OpiskelijaelamaApplication {
 			
 			Appro appro1 = new Appro();
 			
-			Tehtava tehtava1 = new Tehtava("Tehtava1", "Tehdään jotain");
-			Tehtava tehtava2 = new Tehtava("Tehtava2", "Ihmispyramidi");
-			Tehtava tehtava3 = new Tehtava("Tehtava3", "Shotgun");
-			Tehtava tehtava4 = new Tehtava("Tehtava4", "Laula laulu");
+			Tehtava tehtava1 = new Tehtava("Ihmispyramidi", "Tehkää ihmispyramidi.");
+			Tehtava tehtava2 = new Tehtava("Shotgun", "Tehkää tölkin alaosaan reikä ja sen jälkeen juokaa olut reiän kautta mahdollisimman nopeasti.");
+			Tehtava tehtava3 = new Tehtava("Laula laulu", "Laula haluamasi laulu tai laulunpätkä.");
+			Tehtava tehtava4 = new Tehtava("Etsi kynä", "Yhden ryhmän jäsenen tehtävänä on löytää kynä mahdollisimman nopeasti ja tuoda se takaisin lähtöpaikalle.");
+			Tehtava tehtava5 = new Tehtava("Trade up!", "Ottakaa jotain arvotonta, joka teillä jo on (esimerkiksi viiden sentin kolikko tai kynä) ja pyrkikää vaihtokaupan keinoin saavuttamaan sen avulla jotain hienompaa.");
+			Tehtava tehtava6 = new Tehtava("Myy kynä", "Yksi ryhmästä pitää pitchin, jonka tarkoituksena on saada (imaginäärinen) kynä kaupaksi.");
+			Tehtava tehtava7 = new Tehtava("Party trick", "Jokainen ryhmän jäsen demonstroi omaa “party trickiään” samanaikaisesti.");
+			Tehtava tehtava8 = new Tehtava("Signature dance", "Jokainen ryhmän jäsen tanssii omaa mooviaan samanaikaisesti.");
+			Tehtava tehtava9 = new Tehtava("Juoma loppuun", "Juo juomasi kokonaan loppuun.");
+			Tehtava tehtava10 = new Tehtava("Uno", "Pelatkaa kierros Unoa.");
 			
 			Juomapeli peli1 = new Juomapeli("Hitler", "Pelikortit", "Jokainen pelaaja nostaa pakastaan vuorollaan kortin. Jokaisella kortilla oma merkityksensä...");
 			Juomapeli peli2 = new Juomapeli("En ole koskaan", "Jokainen pelaaja kertoo vuorollaan asian, jota ei ole tehnyt koskaan. Ne pelaajista, jotka ovat tehneet kyseisen asian, ottavat huikan.");
@@ -516,6 +522,12 @@ public class OpiskelijaelamaApplication {
 			tehtavaRepo.save(tehtava2);
 			tehtavaRepo.save(tehtava3);
 			tehtavaRepo.save(tehtava4);
+			tehtavaRepo.save(tehtava5);
+			tehtavaRepo.save(tehtava6);
+			tehtavaRepo.save(tehtava7);
+			tehtavaRepo.save(tehtava8);
+			tehtavaRepo.save(tehtava9);
+			tehtavaRepo.save(tehtava10);
 			peliRepo.save(peli1);
 			peliRepo.save(peli2);
 			peliRepo.save(peli3);

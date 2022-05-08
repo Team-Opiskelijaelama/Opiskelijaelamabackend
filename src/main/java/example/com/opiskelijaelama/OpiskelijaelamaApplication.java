@@ -54,6 +54,8 @@ public class OpiskelijaelamaApplication {
 			Juomapeli peli1 = new Juomapeli("Hitler", "Pelikortit", "Jokainen pelaaja nostaa pakastaan vuorollaan kortin. Jokaisella kortilla oma merkityksensä...");
 			Juomapeli peli2 = new Juomapeli("En ole koskaan", "Jokainen pelaaja kertoo vuorollaan asian, jota ei ole tehnyt koskaan. Ne pelaajista, jotka ovat tehneet kyseisen asian, ottavat huikan.");
 			Juomapeli peli3 = new Juomapeli("Fizz Buzz", "Pelaajat istuvat ringissä. Ensimmäinen pelaaja aloittaa sanomalla luvun ”1”. Tämän jälkeen pelaajat luettelevat vuorotellen lukuja ykkösestä ylöspäin. Kaikki luvut, jotka ovat kolmella jaollisia korvataan sanalla Fizz. Kaikki luvut, jotka ovat jaollisia luvulla 5 korvataan sanalla Buzz. Jos luku on jaollinen sekä kolmella että viidellä, sanotaan Fizz Buzz. Jos pelaaja epäröi tai tekee virheen, niin hän joutuu juomaan.");
+			Juomapeli peli4 = new Juomapeli("Kaljakäsi Edward", "Ilmastointiteippiä", "Teippaa pullo tai tölkki käsiisi ja yritä juoda ne.");
+			Juomapeli peli5 = new Juomapeli("Kolikot", "Kolikkoja, Shottilasi", "Pompauta kolikko pöydän kautta lasiin. Jos onnistut, saat päättää kuka juo.");
 			
 			Laulu laulu1 = new Laulu("Helan går", "En liten fågel satt en gång och sjöng i furuskog."
 					+ "\n"
@@ -531,6 +533,8 @@ public class OpiskelijaelamaApplication {
 			peliRepo.save(peli1);
 			peliRepo.save(peli2);
 			peliRepo.save(peli3);
+			peliRepo.save(peli4);
+			peliRepo.save(peli5);
 			lauluRepo.save(laulu1);
 			lauluRepo.save(laulu2);
 			lauluRepo.save(laulu3);
